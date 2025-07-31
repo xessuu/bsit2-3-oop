@@ -2,6 +2,10 @@
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Test Branch");
+       String studentID = "";
+       String firstName = "";
+       String lastName = "";
+       String course = "";
+       String section = "";
     }
 }
