@@ -86,8 +86,3 @@ public class Book {
         return "Book: [" + title + "] by [" + author + "], Average Rating: [" + avgStr + "], Level: [" + level + "]";
     }
 }
-
-Notes and suggestions:
-- If you want `displayBook()` to always show a trailing zero for 0.0, the current implementation formats average with two decimals when there are ratings; if you want exactly 0.0, you can tweak the formatting to always use two decimals (e.g., always use `String.format("%.2f", avg)`, and remove the special-case `ratings.isEmpty()` branch).
-- In `addMultipleRatings`, invalid ratings are ignored with a silent catch. If you prefer to fail fast or collect errors, we can adjust to collect messages or rethrow.
-- If you need thread safety for `totalBooks`, consider synchronization or atomic integers.
