@@ -12,7 +12,9 @@ public class GradeCalculator {
     }
 
     public String getLetterGrade(double average) {
-        if (average >= 90 && average <= 100) {
+        if (average > 100 || average < 0) {
+            return "Invalid Average"; 
+        } else if (average >= 90) {
             return "A";
         } else if (average >= 80) {
             return "B";
