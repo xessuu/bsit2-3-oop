@@ -1,25 +1,17 @@
-package employees;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
+        List<Employee> employees = new ArrayList<>();
+        employees.add(new JavaDeveloper("Alice Smith", 2001, 80000, "Engineering", true, 8));
+        employees.add(new Developer("Bob Johnson", 2002, 70000, "Engineering", true, "Java", 5));
+        employees.add(new Manager("Charlie Brown", 2003, 30000, "Engineering", true, "Tech Team", 4, 15000));
 
-        Manager manager = new Manager("Alice Smith", 2001, 80000.0, "Engineering", 15000.0, 8);
-        Developer developer = new Developer("Bob Johnson", 2002, 70000.0, "Engineering", "Java", 5);
-        Intern intern = new Intern("Charlie Brown", 2003, 30000.0, "Engineering", "Tech University", true);
-
-        System.out.println("\n--- Manager Details ---");
-        manager.displayInfo();
-        System.out.println("Monthly Salary: $" + String.format("%.2f", manager.calculateSalary()));
-        manager.work();
-
-        System.out.println("\n--- Developer Details ---");
-        developer.displayInfo();
-        System.out.println("Monthly Salary: $" + String.format("%.2f", developer.calculateSalary()));
-        developer.work();
-
-        System.out.println("\n--- Intern Details ---");
-        intern.displayInfo();
-        System.out.println("Monthly Salary: $" + String.format("%.2f", intern.calculateSalary()));
-        intern.work();
+        for (Employee e : employees) {
+            System.out.println("==EMPLOYEE MANAGEMENT SYSTEM==");
+            System.out.println(e.toString());
+            System.out.println();
+        }
     }
 }
